@@ -1,0 +1,7 @@
+sudo docker run --name gostack_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+sudo docker pos
+sudo docker ps -a
+docker stop gostack_postgres 
+docker start gostack_postgres 
+yarn typeorm migration:create CreateUsers
+yarn typeorm migration:run
